@@ -1,0 +1,38 @@
+#Получение счета по его айди
+###
+GET http://localhost:9997/api/accounts/1
+
+
+#Получение баланса на счету
+###
+GET http://localhost:9997/api/accounts/1/balance
+
+
+#Снятие средств со счета(средств достаточно)
+###
+POST http://localhost:9997/api/accounts/1/withdraw?amount=100.00
+Content-Type: application/json
+
+{
+  "amount": 100.00
+}
+
+
+#Снятие средств со счета(средств недостаточно)
+###
+POST http://localhost:9997/api/accounts/1/withdraw?amount=99999.00
+Content-Type: application/json
+
+{
+  "amount": 99999.00
+}
+
+
+#Пополнение средств на счету
+###
+POST http://localhost:9997/api/accounts/1/refill?amount=100.00
+Content-Type: application/json
+
+{
+  "amount": 100.00
+}

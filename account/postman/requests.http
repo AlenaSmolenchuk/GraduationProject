@@ -1,0 +1,45 @@
+#Получение счета по его айди
+###
+GET http://localhost:9997/api/accounts/1
+Authorization:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OTk5MjIyMzM1NSIsImlhdCI6MTcxODU4MDQzNiwiZXhwIjoxNzE4NjE2NDM2fQ.p1192PcwnkmKuevEBI9XIdwQP--SvlNarTtGLlL_SBU
+###
+
+#Получение баланса на счету
+###
+GET http://localhost:9997/api/accounts/1/balance
+Authorization:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OTk5MjIyMzM1NSIsImlhdCI6MTcxODU4MDQzNiwiZXhwIjoxNzE4NjE2NDM2fQ.p1192PcwnkmKuevEBI9XIdwQP--SvlNarTtGLlL_SBU
+###
+
+#Снятие средств со счета(средств достаточно)
+###
+POST http://localhost:9997/api/accounts/1/withdraw?amount=100.00
+Authorization:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OTk5MjIyMzM1NSIsImlhdCI6MTcxODU4MDQzNiwiZXhwIjoxNzE4NjE2NDM2fQ.p1192PcwnkmKuevEBI9XIdwQP--SvlNarTtGLlL_SBU
+Content-Type: application/json
+
+{
+  "amount": 100.00
+}
+###
+
+#Снятие средств со счета(средств недостаточно)
+###
+POST http://localhost:9997/api/accounts/1/withdraw?amount=99999.00
+Authorization:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OTk5MjIyMzM1NSIsImlhdCI6MTcxODU4MDQzNiwiZXhwIjoxNzE4NjE2NDM2fQ.p1192PcwnkmKuevEBI9XIdwQP--SvlNarTtGLlL_SBU
+Content-Type: application/json
+
+{
+  "amount": 99999.00
+}
+###
+
+
+#Пополнение средств на счету
+###
+POST http://localhost:9997/api/accounts/1/refill?amount=100.00
+Authorization:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OTk5MjIyMzM1NSIsImlhdCI6MTcxODU4MDQzNiwiZXhwIjoxNzE4NjE2NDM2fQ.p1192PcwnkmKuevEBI9XIdwQP--SvlNarTtGLlL_SBU
+Content-Type: application/json
+
+{
+  "amount": 100.00
+}
+###
