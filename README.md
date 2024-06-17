@@ -1,2 +1,2 @@
 # GraduationProject
-Graduation Project MTS Fintech Academy
+Смоленчук Елена
