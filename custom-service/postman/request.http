@@ -1,0 +1,19 @@
+#Сообщение об ошибке
+###
+POST http://localhost:9998/auth/authenticate
+Content-Type: application/json
+
+{
+  "phoneNumber": "89992223355",
+  "password": "password"
+}
+
+###
+#Успешная аутентификация
+POST http://localhost:9998/auth/authenticate
+Content-Type: application/json
+
+{
+  "phoneNumber": "89992223355",
+  "password": "user1"
+}
