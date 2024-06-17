@@ -1,0 +1,4 @@
+#Получение депозита по его идентификатору
+###
+GET http://localhost:9996/api/deposits/1
+Authorization:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OTk5MjIyMzM1NSIsImlhdCI6MTcxODU4MDQzNiwiZXhwIjoxNzE4NjE2NDM2fQ.p1192PcwnkmKuevEBI9XIdwQP--SvlNarTtGLlL_SBU
